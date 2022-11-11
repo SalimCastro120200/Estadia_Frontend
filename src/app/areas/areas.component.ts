@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
+import { Router } from '@angular/router';
 import { AreasService } from '../servicios/areas.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class AreasComponent implements OnInit {
   lista: any = [];
   page!: number;
 
-  constructor( private AreasService: AreasService) { }
+  constructor( private AreasService: AreasService, private router: Router) { }
 
   ngOnInit(): void {
     this.listarArea();
@@ -26,6 +26,19 @@ export class AreasComponent implements OnInit {
       },
       err => console.log( err )
     );
+  }
+
+  eliminar(id: string){
+    this.AreasService.deleteAreas(id).subscribe( 
+      res => {
+        this.listarArea()
+      },
+      err => console.log( err )
+    )
+  }
+
+  modificar(id: string){
+    this.router.navigate(['/edit/' + id])
   }
 
 }

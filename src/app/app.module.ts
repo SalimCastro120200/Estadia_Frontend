@@ -11,6 +11,7 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 import { AreasComponent } from './areas/areas.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AgregarComponent } from './agregar/agregar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HeaderComponent,
     BodyComponent,
     EmpleadosComponent,
-    AreasComponent
+    AreasComponent,
+    AgregarComponent
   ],
   imports: [
     BrowserModule,
