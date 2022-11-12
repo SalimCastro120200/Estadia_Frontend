@@ -48,8 +48,7 @@ $(document).ready(function(){
 						<h2>Innovattia <b>Empleados</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar Empleado</span></a>
-						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Eliminar</span></a>						
+						<button routerLink="/addEmpleados" type="button" class="btn btn-success">Agregar </button>	
 					</div>
 				</div>
 			</div>
@@ -82,8 +81,10 @@ $(document).ready(function(){
 						<td>{{ empleados.dir_calle + ' ' + empleados.dir_numero + ', ' + empleados.dir_colonia }}</td>
 						<td>{{ empleados.telefono }}</td>
 						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+							<button (click)="modificar(empleados.id_empleados)" class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+						</td>
+						<td>
+							<button (click)="eliminar(empleados.id_empleados)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
 						</td>
 					</tr>
 				</tbody>

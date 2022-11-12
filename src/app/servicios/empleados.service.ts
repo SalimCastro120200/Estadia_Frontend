@@ -41,7 +41,16 @@ export class EmpleadosService {
 }
 
 export interface Empleados{
-  id_equipo?:string;
-  nombre?:string;
-  logo?:string;
+  id_empleados?:string;
+  nombres?:string;
+  a_paterno?:string;
+  a_materno?:string;
+  sexo?: string;
+  correo?: string;
+  telefono?: string;
+  fecha_nacimiento?: string;
+  dir_calle?: string;
+  dir_numero?: string;
+  dir_cp?: string;
+  dir_colonia?: string;
 }

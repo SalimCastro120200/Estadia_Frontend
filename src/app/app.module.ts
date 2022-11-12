@@ -12,6 +12,9 @@ import { AreasComponent } from './areas/areas.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AgregarComponent } from './agregar/agregar.component';
+import { ModificarComponent } from './modificar/modificar.component';
+import { AgregarEmpleadosComponent } from './agregar-empleados/agregar-empleados.component';
+import { ModelarEmpleadosComponent } from './modelar-empleados/modelar-empleados.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { AgregarComponent } from './agregar/agregar.component';
     BodyComponent,
     EmpleadosComponent,
     AreasComponent,
-    AgregarComponent
+    AgregarComponent,
+    ModificarComponent,
+    AgregarEmpleadosComponent,
+    ModelarEmpleadosComponent
   ],
   imports: [
     BrowserModule,

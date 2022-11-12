@@ -1,0 +1,71 @@
+<div class="container"><br><br><br>
+    <h1>Agregar Empleado</h1>
+    <br><br><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <hr>
+                <h3>Datos Personales</h3>
+                <hr>
+                <div class="mb-3">
+                    <label class="form-label">Nombre(s) del Empleado</label>
+                    <input [(ngModel)]="empleados.nombres" type="text" class="form-control" name="nombre" placeholder="Nombre(s) del Empleado">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellido Paterno</label>
+                    <input [(ngModel)]="empleados.a_paterno" type="text" class="form-control" name="estatus" placeholder="Apellido Paterno">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Apellido Materno</label>
+                    <input [(ngModel)]="empleados.a_materno" type="text" class="form-control" name="estatus" placeholder="Apellido Materno">
+                </div>
+                <div class="mb-3">
+                    <label for="sexo">Sexo: </label>
+                    <br>
+                    <select id="sexo" name="sexo" [(ngModel)]="empleados.sexo">
+                        <option value=" ">-------------</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Correo Electronico</label>
+                    <input [(ngModel)]="empleados.correo" type="email" class="form-control" name="correo" placeholder="Correo Electronico">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Número de Telefono</label>
+                    <input [(ngModel)]="empleados.telefono" type="text" class="form-control" name="telefono" placeholder="Número de Telefono">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Fecha de Nacimiento</label>
+                    <input [(ngModel)]="empleados.fecha_nacimiento" type="date" class="form-control" name="fecha_nacimiento" placeholder="Fecha de Nacimiento">
+                </div>
+                <br>
+                <hr>
+                <h3>Dirección</h3>
+                <hr>
+                <div class="mb-3">
+                    <label class="form-label">Calle</label>
+                    <input [(ngModel)]="empleados.dir_calle" type="text" class="form-control" name="calle" placeholder="Calle">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Número</label>
+                    <input [(ngModel)]="empleados.dir_numero" type="number" class="form-control" name="numero" placeholder="Número">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Codigo Postal</label>
+                    <input [(ngModel)]="empleados.dir_cp" type="number" class="form-control" name="cp" placeholder="Codigo Postal">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Colonia</label>
+                    <input [(ngModel)]="empleados.dir_colonia" type="text" class="form-control" name="colonia" placeholder="Colonia">
+                </div>
+                <button (click)="agregar()" class="btn btn-success">Agregar</button>
+                <br><br><br><br><br>
+            </form>
+        </div>
+    </div>
+    
+</div>

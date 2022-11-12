@@ -20,7 +20,6 @@ export class AgregarComponent implements OnInit {
 
   agregar(){
     delete this.area.id_area;
-
     this.AreasService.addAreas(this.area).subscribe();
     this.router.navigate(['/areas']);
   }
