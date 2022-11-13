@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'editArea/:id', component: ModificarComponent },
   { path: 'addEmpleados', component: AgregarEmpleadosComponent },
   { path: 'editEmpleados/:id', component: ModelarEmpleadosComponent },
-  { path: '**', component: EmpleadosComponent },
+  { path: '**', component: BodyComponent },
   
 ];
 

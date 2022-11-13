@@ -69,7 +69,7 @@ $(document).ready(function(){
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor="let empleados of listaEmpeados | paginate: { itemsPerPage: 5, currentPage: page }">
+					<tr *ngFor="let empleados of listaEmpeados | paginate: { itemsPerPage: 3, currentPage: page }">
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1" placeholder="Check">

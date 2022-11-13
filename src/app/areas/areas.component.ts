@@ -38,7 +38,7 @@ export class AreasComponent implements OnInit {
   }
 
   modificar(id: string){
-    this.router.navigate(['/edit/' + id])
+    this.router.navigate(['/editArea/' + id])
   }
 
 }

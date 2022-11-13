@@ -11,36 +11,40 @@ import { map } from 'rxjs';
 })
 export class ModificarComponent implements OnInit {
 
-  area: Area={
-    id_area:'',
-    nombre:'',
+  id_area: string = "";
+
+  area: Area = {
+    id_area: '',
+    nombre: '',
     estado: 0
   };
 
-  constructor( private AreasService: AreasService, private router:Router, private activeRoute:ActivatedRoute ) { }
+  constructor(private AreasService: AreasService, private router: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id_entrada = <string>this.activeRoute.snapshot.params['id'];
-    console.log( 'ID de Entrada ' + id_entrada );
-    this.AreasService.getUnAreas(id_entrada);
-          // res =>{
-          //     this.area = res
-          //   }
-  }
-
-
-
-  modificar()
-  {
-    // this.AreasService.editAreas(this.area.id_area, this.area).subscribe(
-    //   res=>{
-    //     console.log(res);
+    this.id_area = this.activeRoute.snapshot.params['id'];
+    // this.AreasService.getUnAreas(this.id_area).subscribe(
+    //   res => {
+    //     this.area = res;
     //   },
-    //   err=>console.log(err)
-    // // );
 
-    // this.router.navigate(['/editAreas']);
+    //   err => console.log(err)
+    // );
   }
+
+
+
+  modificar() {
+
+    this.AreasService.editAreas(this.id_area, this.area).subscribe(
+      res => {
+        this.router.navigate(['/editArea']);
+      },
+
+      err => console.log(err)
+    );
+  }
+
 
 }
 
