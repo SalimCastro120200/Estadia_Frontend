@@ -6,13 +6,18 @@
         <div class="col-sm-6">
             <form>
                 <div class="mb-3">
-                    <label class="form-label">Nombre de area</label>
+                    <label class="form-label">Nombre de Área</label>
                     <input [(ngModel)]="area.nombre" type="text" class="form-control" name="nombre" placeholder="Nombre del Área">
                 </div>
                 
                 <div class="mb-3">
                     <label class="form-label">Estatus</label>
-                    <input [(ngModel)]="area.estado" type="text" class="form-control" name="estatus" placeholder="Estatus">
+                    <br>
+                    <select id="estado" name="estado" [(ngModel)]="area.estado">
+                        <option value=" ">-------------</option>
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo</option>
+                    </select>
                 </div>
                 
                 <button (click)="agregar()" class="btn btn-success">Agregar</button>

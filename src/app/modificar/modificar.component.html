@@ -12,8 +12,12 @@
                 
                 <div class="mb-3">
                     <label class="form-label">Estatus</label>
-                    <input [(ngModel)]="area.estado" type="text" class="form-control" name="estatus" placeholder="Estatus">
-                </div>
+                    <select id="estado" name="estado" [(ngModel)]="area.estado">
+                        <option value=" ">-------------</option>
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo</option>
+                    </select>
+                    </div>
                 
                 <button (click)="modificar()" class="btn btn-success">Modificar</button>
                 <br><br><br><br><br>
